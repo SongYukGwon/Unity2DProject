@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyDestoryType {Kill = 0, Arrive}
 public class Enemy : MonoBehaviour
 {
 
@@ -10,6 +11,8 @@ public class Enemy : MonoBehaviour
     private int currentIndex = 0; // 현재 이동경로 인덱스
     private Movement movement2D; // 오브젝트 이동제어
     private Spawner enemySpawner; //적의 삭제를 본인이 하지 않고 EnemySpanwer에 알려서 삭제
+    [SerializeField]
+    private int gold = 10;
 
     // Start is called before the first frame update
     public void Setup(Spawner enemySpawner, Transform[] wayPoints)
@@ -61,13 +64,14 @@ public class Enemy : MonoBehaviour
         //현재 위치가 마지막 wayPoint이면 오브젝트 삭제
         else
         {
-            OnDie();
+            gold = 0;
+            OnDie(EnemyDestoryType.Arrive);
         }
     }
 
-    public void OnDie()
+    public void OnDie(EnemyDestoryType type)
     {
         //EnemySpanwer에서 리스트로 적 정보관리 -> 그곳에서 이 인스턴스를 삭제해야함.(리스트관리위함)
-        enemySpawner.DestoryEnemy(this);
+        enemySpawner.DestoryEnemy(type, this, gold);
     }
 }

@@ -7,10 +7,19 @@ public class TowerSpawner : MonoBehaviour
     [SerializeField]
     private GameObject towerPrefab;
     [SerializeField]
+    private int towerBuildGold = 50;
+    [SerializeField]
     private Spawner enemySpawner;
+    [SerializeField]
+    private PlayerGold playerGold;
 
     public void SpawnTower(Transform tileTransform)
     {
+        if (towerBuildGold > playerGold.CurrentGold)
+        {
+            return;
+        }
+
         Tile tile = tileTransform.GetComponent<Tile>();
 
         //타워 건설 여부 확인
@@ -22,6 +31,8 @@ public class TowerSpawner : MonoBehaviour
 
         // 타워가 있음으로 설정후 타워건설
         tile.IsBuildTower = true;
+
+        playerGold.CurrentGold -= towerBuildGold;
 
         GameObject clone = Instantiate(towerPrefab, tileTransform.position , Quaternion.identity);
 

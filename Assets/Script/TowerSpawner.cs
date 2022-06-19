@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerSpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject towerPrefab;
+    private GameObject[] towerPrefab;
     [SerializeField]
     private int towerBuildGold = 50;
     [SerializeField]
@@ -34,7 +34,9 @@ public class TowerSpawner : MonoBehaviour
 
         playerGold.CurrentGold -= towerBuildGold;
 
-        GameObject clone = Instantiate(towerPrefab, tileTransform.position , Quaternion.identity);
+        int randomTowerIndex = Random.Range(0, towerPrefab.Length);
+
+        GameObject clone = Instantiate(towerPrefab[randomTowerIndex], tileTransform.position , Quaternion.identity);
 
         clone.GetComponent<TowerWeapon>().Setup(enemySpawner);
     }

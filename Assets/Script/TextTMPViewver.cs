@@ -11,13 +11,18 @@ public class TextTMPViewver : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textPlayerGold;
     [SerializeField]
+    private TextMeshProUGUI textWave;
+    [SerializeField]
     private PlayerHp playerHP;
     [SerializeField]
     private PlayerGold playerGold;
+    [SerializeField]
+    private WaveSystem waveSystem;
 
     private void Update()
     {
         textPlayerHP.text = playerHP.CurrentHp + "/" + playerHP.MaxHp;
         textPlayerGold.text = playerGold.CurrentGold.ToString();
+        textWave.text = waveSystem.CurrentWave + "/" + waveSystem.MaxWave; 
     }
 }

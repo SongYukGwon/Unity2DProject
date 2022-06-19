@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\ProjectTile.cs" />
     <Compile Include="Assets\Script\Spawner.cs" />
+    <Compile Include="Assets\Script\PlayerGold.cs" />
     <Compile Include="Assets\Script\ObjectDetector.cs" />
     <Compile Include="Assets\Script\EnemyHP.cs" />
     <Compile Include="Assets\Script\Tile.cs" />
@@ -66,10 +67,10 @@
     <Compile Include="Assets\Script\TowerWeapon.cs" />
     <Compile Include="Assets\Script\SliderPositionAutoSetter.cs" />
     <Compile Include="Assets\Script\TowerSpawner.cs" />
+    <Compile Include="Assets\Script\TextTMPViewver.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\PlayerHp.cs" />
-    <Compile Include="Assets\Script\TextTMPViewver.cs" />
-    <Compile Include="Assets\Script\PlayerGold.cs" />
+    <Compile Include="Assets\Script\WaveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

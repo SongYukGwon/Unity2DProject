@@ -30,7 +30,7 @@ public class SliderPositionAutoSetter : MonoBehaviour
        //-> Update보다 늦게 실행되야 됨.
        //오브젝트의 월드 좌표를 기준으로 화면에서의 좌표값을 구함
 
-       Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+       Vector3 screenPosition = Camera.main.WorldToScreenPoint(targetTransform.position);
        
         //화면 내에서 좌표 +distance만큼 떨어진 위치를 Slider Ui의 위치로 선정
        rectTransform.position = screenPosition + distance;

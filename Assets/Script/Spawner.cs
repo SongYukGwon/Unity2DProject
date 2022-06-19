@@ -55,10 +55,19 @@ public class Spawner : MonoBehaviour
         Destroy(enemy.gameObject);
     }
 
-    public void SpawnEnemyHpSlider(Enemy enemy)
+    public void SpawnEnemyHpSlider(GameObject enemy)
     {
         //적 체력을 나타내는 Slider UI 생성
         GameObject sliderClone = Instantiate(enemyHpSliderPrefab);
         //Slider UI 오브젝트를 Parent("Canvas" 오브젝트)의 자식으로 설정
+        //ui는 캔버스의 지역오브젝트로 설정되어 있어서 화면에 보인다.
+        sliderClone.transform.SetParent(canvasTransform);
+        //계층 설정으로 바뀐 크기를 다시 (1,1,1)로 설정
+        sliderClone.transform.localScale = Vector3.one;
+
+        //Slider UI가 쫓아 다닐 대상을 본인으로 설정
+        sliderClone.GetComponent<SliderPositionAutoSetter>().Setup(enemy.transform);
+        //Slider UI에 자신의 체력 정보를 표시하도록 설정
+        sliderClone.GetComponent<EnemyHpViewer>().Setup(enemy.GetComponent<EnemyHP>());
     }
 }

@@ -62,11 +62,11 @@
     <Compile Include="Assets\Script\EnemyHP.cs" />
     <Compile Include="Assets\Script\Tile.cs" />
     <Compile Include="Assets\Script\Movement.cs" />
+    <Compile Include="Assets\Script\EnemyHpViewer.cs" />
     <Compile Include="Assets\Script\TowerWeapon.cs" />
+    <Compile Include="Assets\Script\SliderPositionAutoSetter.cs" />
     <Compile Include="Assets\Script\TowerSpawner.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
-    <Compile Include="Assets\Script\SliderPositionAutoSetter.cs" />
-    <Compile Include="Assets\Script\EnemyHpViewer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

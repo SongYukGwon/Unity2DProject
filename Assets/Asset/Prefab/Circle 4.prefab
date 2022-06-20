@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1459620678584577948}
   - component: {fileID: 3958379095064873587}
   - component: {fileID: 227794360059708241}
+  - component: {fileID: -2641997569243452070}
   m_Layer: 0
   m_Name: Circle 4
   m_TagString: Untagged
@@ -103,6 +104,32 @@ MonoBehaviour:
   attackRate: 0.5
   attackRange: 2
   attackDamage: 1
+--- !u!61 &-2641997569243452070
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823582172331927913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6101277424583805212
 GameObject:
   m_ObjectHideFlags: 0

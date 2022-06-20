@@ -68,9 +68,10 @@
     <Compile Include="Assets\Script\SliderPositionAutoSetter.cs" />
     <Compile Include="Assets\Script\TowerSpawner.cs" />
     <Compile Include="Assets\Script\TextTMPViewver.cs" />
+    <Compile Include="Assets\Script\WaveSystem.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\PlayerHp.cs" />
-    <Compile Include="Assets\Script\WaveSystem.cs" />
+    <Compile Include="Assets\Script\TowerDrag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

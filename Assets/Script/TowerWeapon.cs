@@ -21,6 +21,14 @@ public class TowerWeapon : MonoBehaviour
     private Transform attackTarget = null; //공격대상
     private Spawner enemySpawner; // 게임에 존재하는 적 정보 획득용
 
+    float distance = 10;
+    void OnMouseDrag() 
+    { 
+        print("Drag!!"); 
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance); 
+        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition); 
+        transform.position = objPosition; 
+    }
 
     public void Setup(Spawner enemySpawner)
     {
@@ -117,7 +125,6 @@ public class TowerWeapon : MonoBehaviour
             //공격(발사체 생성)
             SpawnProjectile();
         }
-
     }
 
     private void SpawnProjectile()
